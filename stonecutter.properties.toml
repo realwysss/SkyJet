@@ -1,0 +1,30 @@
+mod.id = "skyjet"
+mod.name = "SkyJet"
+mod.version = "1.0.0"
+mod.description = "The pinnacle of skies. A fully shader-driven procedural sky engine for Minecraft."
+
+# Loader used to build and run the dev environment; mod.loader_dep is the runtime floor.
+deps.fabric_loader = "0.19.5"
+loomx.loom_version = "1.17-SNAPSHOT"
+
+["1.21.11"]
+mod.mc_dep = "~1.21.11"
+mod.java = "21"
+# Lowest loader every Fabric API build for this branch accepts.
+mod.loader_dep = "0.17.3"
+deps.fabric_api = "0.141.6+1.21.11"
+deps.modmenu = "17.0.0"
+
+["26.1"]
+mod.mc_dep = ">=26.1 <26.2"
+mod.java = "25"
+mod.loader_dep = "0.18.3"
+deps.fabric_api = "0.145.1+26.1"
+deps.modmenu = "18.0.1"
+
+["26.2"]
+mod.mc_dep = "~26.2"
+mod.java = "25"
+mod.loader_dep = "0.18.4"
+deps.fabric_api = "0.160.0+26.2"
+deps.modmenu = "20.0.2"

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.skyjet.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientLevelMixin",
+    "CloudRendererMixin",
+    "FogRendererMixin",
+    "SkyRendererMixin",
+    "WeatherEffectRendererMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
