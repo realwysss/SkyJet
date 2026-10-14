@@ -1,3 +1,5 @@
+<p align="center"><img src="src/main/resources/assets/skyjet/icon.png" width="128"></p>
+
 # SkyJet
 
 A fully shader-driven procedural sky engine for Minecraft, by **Wayysss** and **HitsOnly**.
