@@ -52,11 +52,3 @@ tasks.processResources {
     filesMatching("fabric.mod.json") { expand(templateProperties) }
 }
 
-fabricApi {
-    configureTests {
-        createSourceSet = true
-        modId = "skyjet-test"
-        enableGameTests = false
-        eula = true
-    }
-}

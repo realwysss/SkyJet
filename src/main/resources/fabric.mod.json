@@ -6,7 +6,7 @@
   "description": "${description}",
   "authors": [ "Wayysss", "HitsOnly" ],
   "contact": {},
-  "license": "ARR",
+  "license": "All-Rights-Reserved",
   "icon": "assets/skyjet/icon.png",
   "environment": "client",
   "entrypoints": {

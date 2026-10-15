@@ -21,7 +21,7 @@ Client-side only. Requires Fabric API.
 
 ### Fabric Loader floor
 
-Each jar declares the **lowest loader that branch was tested against**, not whatever was newest at
+Each jar declares the **lowest loader that branch supports**, not whatever was newest at
 build time:
 
 | Minecraft | Minimum Fabric Loader |
@@ -160,21 +160,4 @@ Produces a jar per version under `versions/<version>/build/libs/`. Stonecutter d
 multi-version source; switch with `./gradlew "Set active project to <version>"` and reset with
 `./gradlew "Reset active project"` before committing.
 
-### Verifying render changes
-
-Compiling proves very little here, because the three target versions use three different blaze3d
-pipeline APIs and none of them check the shader. Two passes are used instead:
-
-1. **GLSL and uniform layout.** A throwaway LWJGL harness creates a hidden GL 3.3 context, inlines
-   the `#moj_import <minecraft:*.glsl>` includes from an extracted vanilla jar, compiles
-   `skyjet_sky.vsh`/`.fsh` and prints each std140 block's size and member offsets. Those offsets
-   must match the `vec4` index constants in `SkyUniforms`; the block is 2560 bytes / 160 vec4s.
-2. **In-game screenshots.**
-
-   ```
-   ./gradlew :26.2:runClientGameTest
-   ```
-
-   Creates a world, cycles presets, looks straight up and straight down, exercises a texture
-   cubemap and every time source, walks every editor tab, and writes PNGs to
-   `versions/<version>/build/run/clientGameTest/screenshots/`. Run it for all three versions.
+all rights reserved. made by wysss.
